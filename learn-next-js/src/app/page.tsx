@@ -1,4 +1,5 @@
-import Image from 'next/image'
+import Movie from './movie'
+import React from 'react'
 
 export default async function Home() {
 	const key = process.env.NEXT11_PUBLIC_API_KEY
@@ -13,12 +14,19 @@ export default async function Home() {
 	await delay(1000)
 	return (
 		<div>
-			<h1 className="font-bold">Home</h1>
-			<ul>
+			<h1 className=" grid gap-2 grid-cols-fluid justify-center items-center">
 				{res.results.map((movie: any) => {
-					return <li key={movie.id}>{movie.title}</li>
+					return (
+						<Movie
+							key={movie.id}
+							id={movie.id}
+							title={movie.title}
+							poster_path={movie.poster_path}
+							release_date={movie.release_date}
+						/>
+					)
 				})}
-			</ul>
+			</h1>
 		</div>
 	)
 }
