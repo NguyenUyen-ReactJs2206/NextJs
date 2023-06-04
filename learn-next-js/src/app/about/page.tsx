@@ -18,7 +18,7 @@ export default async function AboutPage(props: AboutPageProps) {
 			ABOUT-PAGE
 			{/* <span>Debug: {JSON.stringify(data)} </span> */}
 			<ul>
-				{data.youtubes.map((el) => {
+				{data.youtubes.map((el: any) => {
 					return <li key={el.id}>{el.title}</li>
 				})}
 			</ul>
