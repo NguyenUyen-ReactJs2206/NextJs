@@ -7,10 +7,15 @@ export default async function AboutPage(props: AboutPageProps) {
 		'https://codemobiles.com/adhoc/youtubes/index_new.php?username=admin&password=password&type=songs'
 	)
 	const data = await result.json()
-	console.log(data, 'ddddddd')
+	const delay = (time: number) => {
+		return new Promise((resolve) => {
+			setTimeout(resolve, time)
+		})
+	}
+	await delay(1000)
 	return (
 		<div>
-			ABOUT-ERROR PAGE
+			ABOUT-PAGE
 			{/* <span>Debug: {JSON.stringify(data)} </span> */}
 			<ul>
 				{data.youtubes.map((el) => {
@@ -20,3 +25,8 @@ export default async function AboutPage(props: AboutPageProps) {
 		</div>
 	)
 }
+// function delay(time: number) {
+// 	return new Promise((resolve) => {
+// 		setTimeout(resolve, time)
+// 	})
+// }
