@@ -19,7 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 						<Link href="/" className="flex items-center">
 							<Image
 								src="https://codemobiles.com/biz/images/codemobiles_logo.svg"
-								width={200}
+								width={100}
 								height={100}
 								alt="POSPOS Logo"
 							/>
@@ -43,9 +43,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 								xmlns="http://www.w3.org/2000/svg"
 							>
 								<path
-									fill-rule="evenodd"
+									fillRule="evenodd"
 									d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-									clip-rule="evenodd"
+									clipRule="evenodd"
 								></path>
 							</svg>
 						</button>
